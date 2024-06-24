@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: serif;
+  color: black;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: rebeccapurple;
+}
+
+ul {
+  list-style-type: square;
+}
