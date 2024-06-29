@@ -71,7 +71,7 @@
         <h3 class="font-bold">
           software engineer @ <a href="https://acris.co.uk">acris</a>
           <span class="italic">
-            (feb '24 - present)
+            (feb '24 - june '24')
           </span>
         </h3>
         finished apprenticeship and worked as a qualified software engineer on 2 flagship projects.
