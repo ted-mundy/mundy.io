@@ -15,7 +15,7 @@
       </a>
     </p>
     <p class="mt-6">
-      software engineer with a passion for building & scaling web applications. currently @ <a href="https://acris.co.uk">acris.</a>
+      software engineer with a passion for building & scaling web applications. currently @ <a href="https://pagesuite.com">pagesuite.</a>
     </p>
     <hr class="mt-8" />
     <h1 class="text-xl mt-8 font-bold text-left">
@@ -58,6 +58,15 @@
       experience
     </h1>
     <ul class="text-left w-full mx-auto px-12 mt-4">
+      <li class="mt-2">
+        <h3 class="font-bold">
+          junior full-stack engineer @ <a href="https://pagesuite.com">pagesuite</a>
+          <span class="italic">
+            (july '24 - present)
+          </span>
+        </h3>
+        recently joined pagesuite on the portal team. looking forward to working on some exciting projects.
+      </li>
       <li class="mt-2">
         <h3 class="font-bold">
           software engineer @ <a href="https://acris.co.uk">acris</a>
