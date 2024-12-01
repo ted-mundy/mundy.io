@@ -14,9 +14,9 @@
        github,
      </a>
      or read my most recent
-     <a href="/blog">
+     <NuxtLink to="/blog">
        blog post.
-     </a>
+     </NuxtLink>
    </p>
    <p class="mt-6">
      software engineer with a passion for building & scaling web applications. currently @ <a href="https://pagesuite.com">pagesuite.</a>
@@ -26,7 +26,7 @@
      blog
    </h1>
    <p class="text-left mt-4">
-     i occasionally write about software engineering, web development and other things that interest me. you can find my blog <a href="/blog">here.</a>
+     i occasionally write about software engineering, web development and other things that interest me. you can find my blog <NuxtLink href="/blog">here.</NuxtLink>
      i use capital letters over there.
    </p>
    <hr class="mt-8" />
