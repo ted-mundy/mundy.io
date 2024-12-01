@@ -8,11 +8,15 @@ export default defineNuxtConfig({
       title: 'mundy.io'
     }
   },
+
   css: ['~/assets/css/main.css'],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
+  modules: ['@nuxt/content'],
 })
