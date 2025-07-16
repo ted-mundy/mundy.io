@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center mx-auto max-w-3xl px-4">
+  <div class="text-center mx-auto max-w-3xl px-4 mb-20">
    <h1 class="font-bold text-4xl mt-20">
      <a href="https://github.com/ted-mundy/">
        ted mundy
@@ -19,27 +19,20 @@
      </NuxtLink>
    </p>
    <p class="mt-6">
-     software engineer with a passion for building & scaling web applications. currently @ <a href="https://pagesuite.com">pagesuite.</a>
+     software engineer with a passion for building & scaling applications. currently @ <a href="https://zahnapp.com">zahn.</a>
    </p>
    <hr class="mt-8" />
    <h1 class="text-xl mt-8 font-bold text-left">
      blog
    </h1>
    <p class="text-left mt-4">
-     i occasionally write about software engineering, web development and other things that interest me. you can find my blog <NuxtLink href="/blog">here.</NuxtLink>
-     i use capital letters over there.
+     i may occasionally write about software engineering, web development and other things that interest me. you can find my blog <NuxtLink href="/blog">here.</NuxtLink>
    </p>
    <hr class="mt-8" />
    <h1 class="text-xl mt-8 font-bold text-left">
      projects
    </h1>
    <ul class="text-left w-full mx-auto px-12 mt-4">
-     <li class="mt-2">
-       <a href="https://github.com/ted-mundy/messaging-app">
-         <code>messaging-app</code>
-       </a>:
-       open source messaging app with rust, react and go
-     </li>
      <li class="mt-2">
        <a href="https://cliphog.com">
          <code>cliphog</code>
@@ -72,12 +65,21 @@
    <ul class="text-left w-full mx-auto px-12 mt-4">
      <li class="mt-2">
        <h3 class="font-bold">
-         junior full-stack engineer @ <a href="https://pagesuite.com">pagesuite</a>
+         backend engineer @ <a href="https://zahnapp.com">zahn</a>
          <span class="italic">
-           (july '24 - present)
+           (april '25 - present)
          </span>
        </h3>
-       recently joined pagesuite on the portal team. looking forward to working on some exciting projects.
+       sole backend deveoper at zahn, building out the app from (mostly) scratch.
+     </li>
+      <li class="mt-2">
+       <h3 class="font-bold">
+         junior full-stack engineer @ <a href="https://pagesuite.com">pagesuite</a>
+         <span class="italic">
+           (july '24 - april '25)
+         </span>
+       </h3>
+       worked on fixing endless bugs on an incredibly legacy codebase. would not recommend. nice people though, some of them anyway.
      </li>
      <li class="mt-2">
        <h3 class="font-bold">
@@ -86,7 +88,7 @@
            (feb '24 - june '24')
          </span>
        </h3>
-       finished apprenticeship and worked as a qualified software engineer on 2 flagship projects.
+       finished apprenticeship and worked as an engineer on 2 flagship projects.
      </li>
      <li class="mt-2">
        <h3 class="font-bold">
