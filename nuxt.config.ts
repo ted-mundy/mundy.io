@@ -43,4 +43,12 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
+  runtimeConfig: {
+    public: {
+      posthogPublicKey: 'phc_TN0hnTd3uyxIrnN9XcJwbtzvXHDb847jIxfrzEai298',
+      posthogHost: 'https://eu.i.posthog.com',
+      posthogDefaults: '2026-01-30'
+    }
+  }
 })

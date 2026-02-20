@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^3.11.2",
-    "better-sqlite3": "^12.6.2"
+    "better-sqlite3": "^12.6.2",
+    "posthog-js": "^1.352.0"
   }
 }
