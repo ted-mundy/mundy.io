@@ -1,7 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ['@nuxt/content'],
+  
   content: {},
+  
+  // Cloudflare Pages preset for static site generation
+  nitro: {
+    preset: 'cloudflare-pages',
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    }
+  },
+  
   app: {
     head: {
       title: 'ted mundy — software engineer',
@@ -23,7 +34,9 @@ export default defineNuxtConfig({
       ],
     }
   },
+  
   css: ['~/assets/css/main.css'],
+  
   postcss: {
     plugins: {
       tailwindcss: {},
