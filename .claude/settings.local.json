@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(frontend-design)",
+      "WebFetch(domain:greptile.com)",
+      "WebFetch(domain:stripe.com)",
+      "Bash(curl:*)"
+    ]
+  }
+}

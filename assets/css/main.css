@@ -2,20 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: serif;
-  color: black;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background: #0a0a0b url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E") repeat;
+    background-size: 300px 300px;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    color: #ffffff;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-content;
+  }
 }
 
-a {
-  color: blue;
-  text-decoration: underline;
+@layer components {
+  .bento-card {
+    @apply relative bg-surface-raised/80 backdrop-blur-sm border border-border rounded-2xl p-6
+           transition-all duration-300 ease-out overflow-hidden;
+  }
+
+  .bento-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300 rounded-2xl pointer-events-none;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(161, 161, 170, 0.06), transparent 40%);
+  }
+
+  .bento-card:hover {
+    @apply border-border-hover;
+    transform: translateY(-2px);
+  }
+
+  .bento-card:hover::before {
+    @apply opacity-100;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 30px rgba(161, 161, 170, 0.5), 0 0 60px rgba(161, 161, 170, 0.3);
+  }
+
+  .link-accent {
+    @apply text-accent hover:text-accent/80 transition-colors duration-200 relative;
+  }
+
+  .link-accent::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-px bg-accent transition-all duration-300;
+  }
+
+  .link-accent:hover::after {
+    @apply w-full;
+  }
+
+  .tag {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-mono
+           bg-accent/10 text-accent border border-accent/20;
+  }
+
+  .section-label {
+    @apply font-mono text-xs uppercase tracking-widest text-content-muted mb-6;
+  }
+
+  .gradient-border {
+    position: relative;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(161, 161, 170, 0.4), transparent 50%, rgba(161, 161, 170, 0.2));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .animate-stagger > * {
+    opacity: 0;
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  .animate-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+  .animate-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+  .animate-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+  .animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+  .animate-stagger > *:nth-child(5) { animation-delay: 0.5s; }
+  .animate-stagger > *:nth-child(6) { animation-delay: 0.6s; }
+  .animate-stagger > *:nth-child(7) { animation-delay: 0.7s; }
+  .animate-stagger > *:nth-child(8) { animation-delay: 0.8s; }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .globe-spin {
+    animation: spin 60s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }
 
-a:visited {
-  color: rebeccapurple;
-}
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-content via-accent to-content;
+    background-size: 200% 100%;
+  }
 
-ul {
-  list-style-type: square;
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+  }
 }
